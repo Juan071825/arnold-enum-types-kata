@@ -9,7 +9,8 @@ public class ArnoldEnumTypes {
         double peso = 175.0;
         
 
-        for(Planetas planeta : Planetas.values()){
+        System.out.println("Tu peso en los planetas terrestres");
+        for(Planetas planeta : Planetas.getPlanetasTerrestres()){
             String resultado = String.format("Tu peso en %s es %f", planeta.name(), planeta.pesoPersonaSuperficie(peso));
             System.out.println(resultado);
         }
@@ -21,7 +22,7 @@ public class ArnoldEnumTypes {
             System.out.println(resultado);
         }
 
-        System.out.println("Tu peso en los planetas helados");
+        System.out.println("Tu peso en los gigantes de hielo");
         for(Planetas planeta : Planetas.getPlanetasHelados()){
             String resultado = String.format("Tu peso en %s es %f", planeta.name(), planeta.pesoPersonaSuperficie(peso));
             System.out.println(resultado);
