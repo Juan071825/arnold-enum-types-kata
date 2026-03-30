@@ -25,6 +25,22 @@ public enum Planetas {
     }
 
 
+    public double getMasa(){
+        return this.masa;
+    }
+
+    public double getRadio(){
+        return this.radio;
+    }
+
+    public double gravedadSuperficial(Planetas planeta){
+        return G * planeta.getMasa() / Math.pow(planeta.getRadio(), 2);
+    }
+
+    public double masaPersona(double peso){
+        return peso / gravedadSuperficial(TIERRA);
+    }
+
     
 
 }
