@@ -16,11 +16,11 @@ public class ArnoldEnumTypeTest {
 		planetas = new String[8];
 		int planetasIncluidos = 0;
 		for (Planetas planeta : Planetas.values()) {
-			planetas[planeta.ordinal()] = planeta.name();
+			planetas[planeta.ordinal()] = planeta.name(); /* ordinal() devuelve el index del planeta */
 			planetasIncluidos += 1;
 		}
 		assertThat(planetasIncluidos).isEqualTo(Planetas.values().length);
-		assertThat(planetas).doesNotContainNull();
+		assertThat(planetas).doesNotContainNull(); /* values() devuelve en un array todos los planetas */
 	}
 
 	@Test

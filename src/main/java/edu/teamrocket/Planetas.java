@@ -4,7 +4,7 @@ import java.util.EnumSet;
 
 public enum Planetas {
     
-    MERCURIO(3.303e+23, 2.4397e+6),
+    MERCURIO(3.303e+23, 2.4397e+6), /* Notación científica, se interpreta como 2,4397^6 */
     VENUS(4.869e+24, 6.0518e6),
     TIERRA(5.976e+24, 6.37814e6),
     MARTE(6.421e+23, 3.3972e6),
@@ -16,11 +16,11 @@ public enum Planetas {
 
     public static final double G = 6.67400e-11;
 
-    private double masa;
-    private double radio;
+    private double masa; /* private impide que la información de cada planeta */
+    private double radio; /* sea modificada una vez creada la instancia. */
 
-    private Planetas(double masa, double radio){
-        this.masa = masa;
+    private Planetas(double masa, double radio){ /* debe de ser privado porque solo se tiene que crear una vez (Patrón Singleton) */
+        this.masa = masa; /* this se refiere a una instancia en específico */
         this.radio = radio;
     }
 
@@ -34,10 +34,10 @@ public enum Planetas {
     }
 
     public double gravedadSuperficial(){
-        return G * this.masa / Math.pow(this.radio, 2);
+        return G * this.masa / Math.pow(this.radio, 2); /* Math.pow(base, exponente) */
     }
 
-    public double gravedadSuperficial(Planetas planeta){
+    public double gravedadSuperficial(Planetas planeta){ /* Sobrecarga de métodos, Java distingue ambos por los parámetros que recibe */
         return G * planeta.getMasa() / Math.pow(planeta.getRadio(), 2);
     }
 
@@ -49,8 +49,8 @@ public enum Planetas {
         return masaPersona(peso) * this.gravedadSuperficial();
     }
 
-    public static EnumSet<Planetas> getPlanetasTerrestres(){
-        return EnumSet.range(MERCURIO, MARTE);
+    public static EnumSet<Planetas> getPlanetasTerrestres(){ /* EnumSet agrupa elementos de un enum */
+        return EnumSet.range(MERCURIO, MARTE); /* EnumSet.range(inicio, fin) ambos inclusive */
     }
 
     public static EnumSet<Planetas> getGigantesGaseosos(){
