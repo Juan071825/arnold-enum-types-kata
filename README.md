@@ -5,7 +5,7 @@
 
 <strong>values()</strong> devuelve en un array todos los planetas.
 
-<strong>EnumSet</strong> agrupa elementos de un enum.
+<strong>EnumSet&lt;Tipo de Dato&gt;</strong> agrupa elementos de un enum.
 
 <strong>EnumSet.range(inicio, fin)</strong> ambos inclusive.
 
