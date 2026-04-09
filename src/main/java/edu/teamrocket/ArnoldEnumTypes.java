@@ -13,7 +13,8 @@ public class ArnoldEnumTypes {
         } 
         catch (NumberFormatException exception){
             System.err.println("Peso incorrecto, no es un número.");
-            return;
+            System.out.println("Se establece el valor por defecto 1.");
+            peso = 1.0;
         }
 
 
