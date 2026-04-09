@@ -6,8 +6,16 @@ package edu.teamrocket;
 public class ArnoldEnumTypes {
     public static void main(String[] args) {
 
-        double peso = 175.0;
-        
+        Double peso = 0.0;
+
+        try {
+            peso = Double.parseDouble(args[0]);
+        } 
+        catch (NumberFormatException exception){
+            System.err.println("Peso incorrecto, no es un número.");
+            return;
+        }
+
 
         System.out.println("Tu peso en los planetas terrestres");
         for(Planetas planeta : Planetas.getPlanetasTerrestres()){
