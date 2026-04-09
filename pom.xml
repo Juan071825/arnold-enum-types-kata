@@ -4,7 +4,7 @@
   <artifactId>arnoldEnumTypeMaven</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <url>https://github.com/dfleta/gilded-rose-kata-java</url>
+  <url>https://github.com/Juan071825/arnold-enum-types-kata</url>
 
    <properties>
 		<maven.compiler.source>21</maven.compiler.source>
